@@ -1,0 +1,22 @@
+[class^=_Status]{
+  display: inline-block;
+  font-size: 12px;
+  color: #fff;
+  @include songti;
+  border-radius: 2px;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+  margin: 0 3px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+._Status{
+  &_green{background-color: #259b24}
+  &_blue{background-color: #01579b}
+  &_lightblue{background-color: #1589cd}
+  &_brown{background-color: #795548}
+  &_orange{background-color: #ff9800}
+}

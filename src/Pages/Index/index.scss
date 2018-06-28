@@ -1,0 +1,65 @@
+@import "~mixin";
+
+.block{
+  padding-top: 30px;
+  &_grey{background: #f9f9f9;}
+
+  :global{
+    ._Heading1{position: relative}
+  }
+
+}
+
+.more{
+  position: absolute;
+  right: 0;
+  margin-top: 30px;
+  font-size: 16px;
+  color: #999;
+}
+
+
+//友情链接
+.links{
+  @include clearfix;
+  margin-left: -75px;
+  margin-top: 30px;
+}
+
+.link{
+  float: left;
+  margin-left: 75px;
+  margin-bottom: 48px;
+
+  a{
+    display: table-cell;
+    width: 180px;
+    height: 70px;
+    border: 1px #f0f0f0 solid;
+    text-align: center;
+    vertical-align: middle;
+    cursor: default;
+  }
+}
+
+//专业分类
+.category{
+  @include clearfix;
+  margin: 10px -15px 0;
+  padding-bottom: 50px;
+
+  &Item{
+    float: left;
+    width: 246px;
+    text-align: center;
+
+    img {
+      width: 80px;
+      height: 80px;
+    }
+    h4{
+      margin-top: 20px;
+      font-size: 16px;
+    }
+  }
+}

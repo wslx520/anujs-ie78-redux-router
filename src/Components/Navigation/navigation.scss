@@ -1,0 +1,28 @@
+@import "~mixin";
+
+.Navigation {
+  margin-bottom: 5px;
+  background-color: #093962;
+
+  ul {
+    @include clearfix;
+  }
+
+  li {
+    float: left;
+    width: 100px;
+    line-height: 50px;
+    margin-right: 10px;
+  }
+
+  a {
+    font-size: 14px;
+    color: #fff;
+  }
+
+}
+
+.current {
+  font-weight: bold;
+  text-shadow: 0 0 2px #fff
+}

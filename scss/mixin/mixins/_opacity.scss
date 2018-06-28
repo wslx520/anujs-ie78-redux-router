@@ -1,0 +1,13 @@
+// Opacity
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  // IE8 filter
+  $opacity-ie: ($opacity * 100);
+  filter: alpha(opacity=$opacity-ie);
+}
+
+@mixin opacity-bg($rgba-color) {
+  background-color: $rgba-color;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($rgba-color)}', endColorstr='#{ie-hex-str($rgba-color)}');
+}

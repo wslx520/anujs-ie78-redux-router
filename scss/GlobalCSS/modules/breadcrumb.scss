@@ -1,0 +1,10 @@
+
+.Breadcrumb{
+  line-height: 50px;
+  color: #999;
+  font-size: 14px;
+
+  a{color: inherit; transition: color 0.3s ease;}
+  a:before, span:before{content: ">"; padding: 0 10px;}
+  a:first-child:before{display: none; padding-left: 0;}
+}

@@ -1,0 +1,188 @@
+._Table{
+
+  &_full{
+    width: 100%;
+  }
+
+  &_1{
+    font-size: 12px;
+    line-height: 1.5;
+    th, td{padding: 5px 0; text-align: left;}
+    th{color: #666; font-weight: normal}
+    td{color: #003262}
+  }
+
+  &_2{
+    font-size: 12px;
+    line-height: 42px;
+    border:1px #1589cd solid;
+
+    th{
+      border: 1px #003262 solid;
+      background-color: #003262;
+      color: #fff;
+      text-align: center;
+      line-height: 36px;
+      font-weight: normal;
+    }
+    td{
+      font-size: 14px;
+      color: #333;
+      border-top: 1px #ddd solid;
+    }
+    tr{
+      background-color: #fff;
+      &.selected{background-color: #eee}
+    }
+  }
+
+  &_3{
+    font-size: 14px;
+
+    th{
+      color: #333;
+      font-weight: normal;
+      text-align: left;
+      padding-left: 5px;
+    }
+
+    td{
+      color: #666;
+
+    }
+
+    th,td{
+      height: 72px;
+      vertical-align: middle;
+      font-size: 14px;
+      @include yahei;
+    }
+
+    tr{
+      border-bottom: 1px #ededed solid;
+    }
+  }
+
+  //灰白相间,藏蓝色表头,带标题
+  &_4, &_8, &_9{
+    font-size: 14px;
+    border: 1px #ddd solid;
+    border-bottom: 0;
+    border-collapse:separate;
+
+    caption{
+      line-height: 3;
+      font-size: 18px;
+      @include yahei;
+      color: #003262;
+      text-align: left;
+    }
+
+
+    th{
+      height: 36px;
+      vertical-align: middle;
+      font-size: 12px;
+      color: #003262;
+      font-weight: normal;
+      border-bottom: 2px #003262 solid;
+    }
+
+    td{
+      height: 50px;
+      vertical-align: middle;
+      border-left: 1px #ddd solid;
+      border-bottom: 1px #ddd solid;
+      padding: 0 10px;
+      &:first-child{border-left: 0}
+    }
+
+    tbody tr:nth-child(2n){background-color: #f2f2f2}
+  }
+
+  &_8{tbody tr:nth-child(2n){background-color: inherit}}
+  &_9 {
+    td{height: 32px;}
+    tbody tr:nth-child(2n){background-color: inherit}
+  }
+
+  //字段名+数值表格
+  &_5{
+    font-size: 14px;
+    border: 1px #ccc solid;
+    border-bottom: 0;
+
+    caption{
+      line-height: 3;
+      font-size: 18px;
+      @include yahei;
+      color: #003262;
+      text-align: left;
+    }
+
+    td,th{
+      height: 46px;
+      vertical-align: middle;
+      border: 1px #ccc solid;
+    }
+
+    th{
+      background-color: #ebebeb;
+      text-align: left;
+      color: #003262;
+      font-weight: normal;
+      padding-left: 20px;
+      font-size: 12px;
+    }
+
+    td{padding: 0 10px;}
+  }
+
+  //申请学位专用
+  &_6,&_7{
+    font-size: 12px;
+    border: 1px #ccc solid;
+    border-collapse: separate;
+
+    caption{
+      line-height: 3;
+      font-size: 18px;
+      @include yahei;
+      color: #003262;
+      text-align: left;
+    }
+
+    td,th{
+      vertical-align: middle;
+    }
+
+    th{
+      height: 36px;
+      text-align: center;
+      color: #003262;
+      font-weight: normal;
+      border-bottom: 2px #003262 solid;
+    }
+
+    td{
+      text-align: left;
+      height: 50px;
+      padding-left: 10px;
+      border-bottom: 1px #ddd solid;
+    }
+
+    tr:nth-child(2n){background-color: #eee}
+    tr:last-child td{border-bottom: 0;}
+  }
+
+  &_7{
+    tr:nth-child(2n){background-color: inherit}
+  }
+}
+
+[class^=_Table]{
+  .l{text-align: left;}
+  .r{text-align: right;}
+  .c{text-align: center;}
+  .p{padding: 0}
+}

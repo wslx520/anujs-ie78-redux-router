@@ -1,0 +1,101 @@
+@import "~mixin";
+
+.CourseCard{
+  $module : &;
+  float: left;
+  width: 205px;
+  margin-left: 43.6px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.img{
+  position: relative;
+  width: 205px;
+  height: 115.3125px;
+  overflow: hidden;
+
+  img{
+    height: 100%;
+    width: 100%;
+    transition: 0.5s;
+    &:hover{transform: scale(1.1)}
+  }
+}
+
+
+.title{
+  margin-top: 15px;
+  font-size: 14px;
+  @include text-overflow;
+}
+
+.info{
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #999;
+}
+
+.price{
+  font-size: 14px;
+  color: #ff7745;
+}
+
+.icons{
+  position: absolute;
+  right: 0;
+  top: 10px;
+
+  &>i{
+    display: inline-block;
+    width: 29px;
+    height: 29px;
+    margin-right: 10px;
+  }
+  .new{background: url(./img/new.png)}
+  .hot{background: url(./img/hot.png)}
+}
+
+.cover{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  @include opacity-bg(rgba(0,0,0,0.7));
+  background-image: url(./img/bug.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+//&-list5{
+//  margin-top: 40px;
+//  margin-left: -43.6px;
+//  @include clearfix;
+//
+//  & #{$module}{
+//    float: left;
+//    width: 205px;
+//    margin-left: 43.6px;
+//    margin-bottom: 20px;
+//  }
+//}
+//
+//&-list4{
+//  margin-top: 40px;
+//  margin-left: -29px;
+//  @include clearfix;
+//
+//  & #{$module}{
+//    float: left;
+//    margin-left: 29px;
+//    margin-bottom: 45px;
+//    width: 278px;
+//
+//    &-img{
+//      width: 100%;
+//      height: 158px;
+//    }
+//  }
+//}

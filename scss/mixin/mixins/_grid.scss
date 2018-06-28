@@ -1,0 +1,58 @@
+// Grid system
+//
+// Generate semantic grid columns with these mixins.
+
+// Centered container element
+@mixin make-grid-columns($class){
+  @for $i from 1 through $grid-columns{
+    .c#{$class}-#{$i}{width:span($i);}
+  }
+}
+
+@mixin make-grid-hidden($class){
+  .hidden#{$class}{display: none}
+}
+
+@mixin make-grid-visible($class){
+  .visible#{$class}{display: block}
+  .visible-inline#{$class}{display: block}
+}
+
+@mixin make-grid-pull($class){
+  //.c#{$class}-pull0{right: auto}
+  @for $i from 0 through $grid-columns {
+    .c#{$class}-pull#{$i}{right: span($i);}
+  }
+}
+
+@mixin make-grid-push($class){
+  //.c#{$class}-push0{left: auto}
+  @for $i from 0 through $grid-columns {
+    .c#{$class}-push#{$i}{left: span($i);}
+  }
+}
+
+@mixin make-grid-offset($class){
+  @for $i from 0 through $grid-columns {
+    .c#{$class}-offset#{$i}{margin-left: span($i);}
+  }
+}
+
+@mixin make-grid($class){
+  @include make-grid-columns($class);
+  @include make-grid-pull($class);
+  @include make-grid-push($class);
+  @include make-grid-offset($class);
+  @include make-grid-hidden($class);
+  @include make-grid-visible($class);
+}
+
+
+@mixin responsive($class){
+  @if $class == 1 {@content;}
+  @if $class == 2 {@media (max-width: $screen-2-max) {@content;}}
+  @if $class == 3 {@media (max-width: $screen-3-max) {@content;}}
+  @if $class == 4 {@media (max-width: $screen-4-max) {@content;}}
+  @if $class == 5 {@media (max-width: $screen-5-max) {@content;}}
+  @if $class == 6 {@media (max-width: $screen-6-max) {@content;}}
+}

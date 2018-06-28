@@ -1,0 +1,18 @@
+@import "~mixin";
+
+:global{
+  @import "variables";
+  @import "grid";
+  @import "normalize";
+  @import "scaffolding";
+  @import "type";
+  @import "input";
+  //@import "iconfont";
+
+  @import "./modules/heading";
+  @import "./modules/button";
+  @import "./modules/main";
+  @import "./modules/breadcrumb";
+  @import "./modules/info";
+  @import "./modules/color";
+}

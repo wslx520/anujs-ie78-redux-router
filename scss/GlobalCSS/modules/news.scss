@@ -1,0 +1,22 @@
+._News{
+  @include clearfix;
+
+  a:hover{text-decoration: underline;}
+
+  &>li{
+    font-size: 14px;
+    line-height: 2.5;
+    padding-left: 11px;
+    background: url(./img/dotnews.png) left center no-repeat;
+  }
+
+  &-item{
+    &_half{
+      float: left;
+      width: 50%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}
