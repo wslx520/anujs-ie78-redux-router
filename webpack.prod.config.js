@@ -24,9 +24,18 @@ module.exports = {
         root : ['./scss'],
         extensions: ['', '.js', '.jsx'],
         alias: {
-            "react": "anujs-all",
-            "react-dom": "anujs-all"
-        },
+            containers: path.resolve(__dirname, 'src/containers'),
+            component: path.resolve(__dirname, 'src/component'),
+            // 以前你可能这样引用 import { Nav } from '../../containers'
+            // 现在你可以这样引用 import { Nav } from 'app/containers'
+            actions: path.resolve(__dirname, 'src/actions'),
+            store: path.resolve(__dirname, 'src/store'),
+            images: path.resolve(__dirname, 'src/images'),
+            // "react": "anujs-all",
+            // "react-dom": "anujs-all",
+            react: path.resolve('./src/lib/anujs-all.js'),
+            'react-dom': path.resolve('./src/lib/anujs-all.js'),
+        }
         // alias: {
         //     "react": "anujs/dist/ReactIE.js",
         //     "react-dom": "anujs/dist/ReactIE.js",
@@ -35,11 +44,11 @@ module.exports = {
         //     'create-react-class': 'anujs/lib/createClass'
         // }
     },
-    externals: {
-        'react': 'React',
-        'react-dom': 'ReactDOM',
-        'react-router': 'ReactRouter',
-    },
+    // externals: {
+    //     'react': 'React',
+    //     'react-dom': 'ReactDOM',
+    //     'react-router': 'ReactRouter',
+    // },
     module: {
         loaders: [
             {test: /\.(js|jsx)(\?.*$|$)/,exclude: /node_modules/,loader: 'babel-loader'},
